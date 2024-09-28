@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YouTube Clone</title>
+  <link rel="stylesheet" href="Assets/icons/YouTube.png" type="image/x-icon" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="Assets/css/general.css" />
+  <link rel="stylesheet" href="Assets/css/header.css" />
+  <link rel="stylesheet" href="Assets/css/video.css" />
+  <link rel="stylesheet" href="Assets/css/sidebar.css" />
+  <link rel="stylesheet" href="Assets/css/tooltip.css" />
+  <link rel="stylesheet" href="Assets/css/responsive.css" />
+  <link rel="stylesheet" href="Assets/css/footer.css" />
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+  <!-- header -->
+  <nav class="header">
+    <div class="left-section">
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar" aria-label="Toggle navigation" style="border: none">
+        &#9776;
+      </button>
+      <img src="Assets/icons/youtube-logo.svg" title="YouTube Home" alt="" class="youtube-logo" />
+    </div>
+    <div class="middle-section">
+      <input class="search-bar" type="text" placeholder="Search" />
+      <button class="search-button" data-title="Search">
+        <img src="Assets/icons/search.svg" alt="" class="search-icon" />
+      </button>
+      <button class="voice-search-button" data-title="Search with your voice">
+        <img src="Assets/icons/voice-search-icon.svg" alt="" class="voice-search-icon" />
+      </button>
+    </div>
+    <div class="right-section">
+      <button class="right-section-buttons" data-title="Create">
+        <img src="Assets/icons/upload.svg" class="upload-icon" alt="" />
+      </button>
+      <button class="right-section-buttons" data-title="YouTube apps">
+        <img src="Assets/icons/youtube-apps.svg" class="youtube-apps-icon" alt="" />
+      </button>
+      <button class="right-section-buttons" data-title="Notifications">
+        <div class="notifications-icon-container">
+          <img src="Assets/icons/notifications.svg" class="notifications-icon" data-title="Notifications" alt="" />
+          <div class="notifications-count">3</div>
+        </div>
+      </button>
+      <img src="Assets/logo/channel_me.jpg" class="channel-me-icon" alt="" />
+    </div>
+  </nav>
+  <nav class="navbar bg-body-tertiary navbar_2">
+    <div class="container-fluid offcanvas-main">
+      <div class="offcanvas-links d-flex justify-content-start">
+        <a class="nav-link full-screen-nav-a" href="index.html">All</a>
+        <a class="nav-link full-screen-nav-a" href="JavaScript.html">JavaScript</a>
+        <a class="nav-link full-screen-nav-a" href="C++.html">C++</a>
+        <a class="nav-link full-screen-nav-a" href="Acrylic painting techniques.html">Acrylic painting techniques</a>
+        <a class="nav-link full-screen-nav-a" href="TMKOC.html">TMKOC</a>
+      </div>
+
+      <div class="offcanvas offcanvas-start" style="width: 200px !important; color: black !important" tabindex="-1"
+        id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header d-flex justify-content-end">
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item panel-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item panel-item">
+              <a class="nav-link" href="#">Shorts</a>
+            </li>
+            <li class="nav-item panel-item">
+              <a class="nav-link" href="#">Subscriptions</a>
+            </li>
+            <li class="nav-item panel-item">
+              <a class="nav-link" href="#">Your Channel</a>
+            </li>
+            <li class="nav-item panel-item">
+              <a class="nav-link" href="#">History</a>
+            </li>
+            <li class="nav-item panel-item">
+              <a class="nav-link" href="#">Your Videos</a>
+            </li>
+            <li class="nav-item panel-item">
+              <a class="nav-link" href="#">Watch Later</a>
+            </li>
+            <li class="nav-item panel-item">
+              <a class="nav-link" href="#">Liked Videos</a>
+            </li>
+            <li class="nav-item panel-item">
+              <a class="nav-link" href="#">Important</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <!-- sidebar -->
+    <section class="sidebar">
+      <div class="sidebar-link">
+        <img src="Assets/icons/home.svg" alt="" />
+        <div>Home</div>
+      </div>
+
+      <div class="sidebar-link">
+        <img src="Assets/icons/explore.svg" alt="" />
+        <div>Explore</div>
+      </div>
+
+      <div class="sidebar-link">
+        <img src="Assets/icons/subscriptions.svg" alt="" />
+        <div>Subscriptions</div>
+      </div>
+      <div class="sidebar-link">
+        <img src="Assets/icons/originals.svg" alt="" />
+        <div>Originals</div>
+      </div>
+      <div class="sidebar-link">
+        <img src="Assets/icons/youtube-music.svg" alt="" />
+        <div>Music</div>
+      </div>
+      <div class="sidebar-link">
+        <img src="Assets/icons/library.svg" alt="" />
+        <div>Library</div>
+      </div>
+    </section>
+
+    <!-- video -->
+    <section class="video-grid">
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <iframe width="316px" height="200px"
+            src="https://www.youtube-nocookie.com/embed/XKHEtdqhLK8?si=Y6qcOvQmMMkT1eHb" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <div class="video-time">12:00:00</div>
+        </div>
+        <div class="video-info-grid">
+          <div class="channel-picture">
+            <img class="profile-picture" src="Assets/logo/channel_04.jpg" alt="" />
+          </div>
+          <div class="video-info">
+            <p class="video-title">Python Full Course for free 🐍</p>
+            <p class="video-author" chanel-title="Bro Code">Bro Code</p>
+            <p class="video-stats">13M views &#183; 1 year ago</p>
+          </div>
+        </div>
+      </div>
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <iframe width="316px" height="200px"
+            src="https://www.youtube-nocookie.com/embed/vnnlUCLfn6I?si=lTwGz11ZrFjxIQwg" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <div class="video-time">10:52</div>
+        </div>
+        <div class="video-info-grid">
+          <div class="channel-picture">
+            <img class="profile-picture" src="Assets/logo/channel_05.jpg" alt="" />
+          </div>
+          <div class="video-info">
+            <p class="video-title">
+              Inline & Block Elements in HTML | Sigma Web Development Course
+            </p>
+            <p class="video-author" chanel-title="CodeWithHarry">
+              CodeWithHarry
+            </p>
+            <p class="video-stats">45K views &#183; 2 days ago</p>
+          </div>
+        </div>
+      </div>
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <iframe width="316px" height="200px"
+            src="https://www.youtube-nocookie.com/embed/KzA01DdRj50?si=6jCKKG6x9_viwvR4" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <div class="video-time">24:17</div>
+        </div>
+        <div class="video-info-grid">
+          <div class="channel-picture">
+            <img class="profile-picture" src="Assets/logo/channel_06.jpg" alt="" />
+          </div>
+          <div class="video-info">
+            <p class="video-title">
+              How to EARN ₹50,000 Per Month from HOME | Tanay Pratap Hindi
+            </p>
+            <p class="video-author" chanel-title="Tanay Pratap">
+              Tanay Pratap
+            </p>
+            <p class="video-stats">143K views &#183; 2 months ago</p>
+          </div>
+        </div>
+      </div>
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <iframe width="316px" height="200px"
+            src="https://www.youtube-nocookie.com/embed/PqqwTBKYusU?si=rndY7xCHmj-DHtw0" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <div class="video-time">15:49</div>
+        </div>
+        <div class="video-info-grid">
+          <div class="channel-picture">
+            <img class="profile-picture" src="Assets/logo/channel_08.jpg" alt="" />
+          </div>
+          <div class="video-info">
+            <p class="video-title">
+              1 Year Journey of our Special Project ! *layers.shop*
+            </p>
+            <p class="video-author" chanel-title="Tech Burner">Tech Burner</p>
+            <p class="video-stats">670K views &#183; 5 days ago</p>
+          </div>
+        </div>
+      </div>
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <iframe width="316px" height="200px"
+            src="https://www.youtube-nocookie.com/embed/3DVcz2DZdXk?si=koTg3Z2IHtmv9pyJ" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <div class="video-time">13:47</div>
+        </div>
+        <div class="video-info-grid">
+          <div class="channel-picture">
+            <img class="profile-picture" src="Assets/logo/channel_09.jpg" alt="" />
+          </div>
+          <div class="video-info">
+            <p class="video-title">
+              What ACTUALLY Happened at the Ambani Wedding
+            </p>
+            <p class="video-author" chanel-title="Slayy Point">Slayy Point</p>
+            <p class="video-stats">80 lakh views &#183; 2 weeks ago</p>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <iframe width="316px" height="200px"
+            src="https://www.youtube-nocookie.com/embed/Hi8FCUYZhMk?si=7vAVpCGKcBGxLc_T" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <div class="video-time">13:10</div>
+        </div>
+        <div class="video-info-grid">
+          <div class="channel-picture">
+            <img class="profile-picture" src="Assets/logo/channel_02.jpg" alt="" />
+          </div>
+          <div class="video-info">
+            <p class="video-title">How to Find Remote Jobs?</p>
+            <p class="video-author" chanel-title="Kunal Kushwaha">
+              Kunal Kushwaha
+            </p>
+            <p class="video-stats">45K views &#183; 2 weeks ago</p>
+          </div>
+        </div>
+      </div>
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <iframe width="316px" height="200px"
+            src="https://www.youtube-nocookie.com/embed/o8iC4b7tMS8?si=Q9JHo73an60t5Daw" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <div class="video-time">11:17</div>
+        </div>
+
+        <div class="video-info-grid">
+          <div class="channel-picture">
+            <img class="profile-picture" src="Assets/logo/channel_02.jpg" alt="" />
+          </div>
+          <div class="video-info">
+            <p class="video-title">
+              Purgatory King👑 Best Br Gameplay 17Kills With New Anime Bundle
+              - Free Fire Max
+            </p>
+            <p class="video-author" chanel-title="Kunal Kushwaha">
+              Kunal Kushwaha
+            </p>
+            <p class="video-stats">76K views &#183; months ago</p>
+          </div>
+        </div>
+      </div>
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <iframe width="316px" height="200px"
+            src="https://www.youtube-nocookie.com/embed/IXbnzEHZDPg?si=9RsSjtPHspfqT4lU" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <div class="video-time">3:11</div>
+        </div>
+        <div class="video-info-grid">
+          <div class="channel-picture">
+            <img class="profile-picture" src="Assets/logo/channel_10.jpg" alt="" />
+          </div>
+          <div class="video-info">
+            <p class="video-title">
+              Top Gun: Maverick (2022) - Maverick's Test Run Scene |
+              Movieclips
+            </p>
+            <p class="video-author" chanel-title="Movieclips">Movieclips</p>
+            <p class="video-stats">8.5M views &#183; 1 year ago</p>
+          </div>
+        </div>
+      </div>
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <iframe width="316px" height="200px"
+            src="https://www.youtube-nocookie.com/embed/jS4aFq5-91M?si=YwIv7mEdD-63_y-N" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <div class="video-time">7:44:20</div>
+        </div>
+        <div class="video-info-grid">
+          <div class="channel-picture">
+            <img class="profile-picture" src="Assets/logo/channel_11.jpg" alt="" />
+          </div>
+          <div class="video-info">
+            <p class="video-title">JavaScript Programming - Full Course</p>
+            <p class="video-author" chanel-title="freeCodeCamp.org">
+              freeCodeCamp.org
+            </p>
+            <p class="video-stats">3.1M views &#183; 2 year ago</p>
+          </div>
+        </div>
+      </div>
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <iframe width="316px" height="200px"
+            src="https://www.youtube-nocookie.com/embed/Epy3ivrG8ss?si=I8df5RM47g9QrVHi" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <!-- <img class="thumbnail" src="Assets/thumbnails/thumbnail12.jpg" alt="" /> -->
+          <div class="video-time">53:13</div>
+        </div>
+        <div class="video-info-grid">
+          <div class="channel-picture">
+            <img class="profile-picture" src="Assets/logo/channel_12.jpg" alt="" />
+          </div>
+          <div class="video-info">
+            <p class="video-title">
+              Live Mock Interview with @Striver | MAANG Format | GeeksforGeeks
+            </p>
+            <p class="video-author" chanel-title="GeeksforGeeks">
+              GeeksforGeeks
+            </p>
+            <p class="video-stats">77K views &#183; Streamed 1 year ago</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
